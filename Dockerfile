@@ -24,6 +24,7 @@ COPY package*.json ./
 RUN npm ci --omit=dev && npm cache clean --force
 
 COPY --from=builder /app/server ./server
+COPY --from=builder /app/src ./src
 COPY --from=builder /app/db ./db
 COPY --from=builder /app/dist ./dist
 COPY --from=builder /app/public ./public
