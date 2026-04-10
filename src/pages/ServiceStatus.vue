@@ -940,6 +940,7 @@ export default {
     .group-section {
         background: $dark-bg;
         border-color: $dark-border-color;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
     }
 
     .group-header {
@@ -961,14 +962,17 @@ export default {
     .folder-card {
         background: $dark-bg2;
         border-color: $dark-border-color;
+        border-left-color: rgba(148, 163, 184, 0.2);
 
         &:hover {
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+            border-left-color: rgba(99, 102, 241, 0.6);
         }
 
         &.has-error {
-            border-color: #f87171;
-            background: linear-gradient(135deg, #2a1515 0%, #2d1a1a 100%);
+            border-color: #991b1b;
+            border-left-color: #ef4444;
+            background: linear-gradient(135deg, rgba(69, 10, 10, 0.4) 0%, rgba(69, 10, 10, 0.8) 100%);
         }
 
         &.expanded {
@@ -981,12 +985,29 @@ export default {
         color: $dark-font-color;
     }
 
+    .badge-soft-success {
+        background-color: rgba(74, 222, 128, 0.15) !important;
+        color: #4ade80 !important;
+    }
+
+    .badge-soft-danger {
+        background-color: rgba(248, 113, 113, 0.15) !important;
+        color: #f87171 !important;
+    }
+
+    .badge-soft-secondary {
+        background-color: rgba(156, 163, 175, 0.1) !important;
+        color: #9ca3af !important;
+    }
+
     .service-list {
-        border-top-color: $dark-border-color;
+        background-color: rgba(0, 0, 0, 0.25);
+        border-color: $dark-border-color;
+        box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.2);
     }
 
     .all-ok {
-        background: #1a2a20;
+        background: rgba(22, 163, 74, 0.1);
         color: #4ade80;
     }
 
@@ -994,12 +1015,17 @@ export default {
         border-bottom-color: $dark-border-color;
 
         &:hover {
-            background-color: rgba(255, 255, 255, 0.03);
+            background-color: rgba(255, 255, 255, 0.05);
         }
 
         &.service-down {
-            background-color: rgba(239, 68, 68, 0.12);
+            background-color: rgba(239, 68, 68, 0.15);
+            color: #fca5a5;
         }
+    }
+
+    .svc-msg {
+        color: #9ca3af;
     }
 
     .empty-tip {
