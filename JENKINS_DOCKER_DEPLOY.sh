@@ -40,7 +40,7 @@ cat > "$DATA_DIR/db-config.json" <<EOF
 EOF
 
 echo "===> 构建镜像"
-docker build -f docker/dockerfile --target release -t "$IMAGE_NAME" .
+docker build -t "$IMAGE_NAME" .
 
 echo "===> 删除旧容器"
 docker rm -f "$CONTAINER_NAME" >/dev/null 2>&1 || true

@@ -1,10 +1,12 @@
-# Deprecated: use docker/dockerfile
-# This file is kept only as a local reference. Jenkins deploy uses docker/dockerfile.
+# AI Accept 2026-04-10 master v1
+# Uptime Kuma - Jenkins Docker 部署专用 Dockerfile
+# 两阶段构建：builder 构建前端，release 只保留运行时依赖
 
 FROM node:20-bookworm-slim AS builder
 
 WORKDIR /app
 
+COPY .npmrc .npmrc
 COPY package*.json ./
 RUN npm ci
 
@@ -17,8 +19,9 @@ WORKDIR /app
 
 ENV NODE_ENV=production
 
+COPY .npmrc .npmrc
 COPY package*.json ./
-RUN npm ci --omit=dev --legacy-peer-deps && npm cache clean --force
+RUN npm ci --omit=dev && npm cache clean --force
 
 COPY --from=builder /app/server ./server
 COPY --from=builder /app/db ./db
