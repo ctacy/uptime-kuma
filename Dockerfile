@@ -1,3 +1,6 @@
+# Deprecated: use docker/dockerfile
+# This file is kept only as a local reference. Jenkins deploy uses docker/dockerfile.
+
 FROM node:20-bookworm-slim AS builder
 
 WORKDIR /app
@@ -15,7 +18,7 @@ WORKDIR /app
 ENV NODE_ENV=production
 
 COPY package*.json ./
-RUN npm ci --omit=dev && npm cache clean --force
+RUN npm ci --omit=dev --legacy-peer-deps && npm cache clean --force
 
 COPY --from=builder /app/server ./server
 COPY --from=builder /app/db ./db
