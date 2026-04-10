@@ -7,7 +7,7 @@
                 class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none"
             >
                 <object class="bi me-2 ms-4" width="40" height="40" data="/icon.svg" />
-                <span class="fs-4 title">Uptime Kuma</span>
+                <span class="fs-4 title">好医生云医疗AI好医生产品中心监控平台</span>
             </router-link>
         </header>
 

@@ -28,7 +28,7 @@ export const isNode = typeof process !== "undefined" && process?.versions?.node;
  */
 const dayjs = isNode ? require("dayjs") : dayjsFrontend;
 
-export const appName = "Uptime Kuma";
+export const appName = "好医生云医疗AI好医生产品中心监控平台";
 export const DOWN = 0;
 export const UP = 1;
 export const PENDING = 2;

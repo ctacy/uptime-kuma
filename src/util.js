@@ -17,7 +17,7 @@ const jsonata = require("jsonata");
 exports.isDev = process.env.NODE_ENV === "development";
 exports.isNode = typeof process !== "undefined" && ((_a = process === null || process === void 0 ? void 0 : process.versions) === null || _a === void 0 ? void 0 : _a.node);
 const dayjs = exports.isNode ? require("dayjs") : dayjs_1.default;
-exports.appName = "Uptime Kuma";
+exports.appName = "好医生云医疗AI好医生产品中心监控平台";
 exports.DOWN = 0;
 exports.UP = 1;
 exports.PENDING = 2;

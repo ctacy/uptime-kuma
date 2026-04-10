@@ -3,7 +3,7 @@
         <form @submit.prevent="submit">
             <div>
                 <object width="64" height="64" data="/icon.svg" />
-                <div style="font-size: 28px; font-weight: bold; margin-top: 5px">Uptime Kuma</div>
+                <div style="font-size: 28px; font-weight: bold; margin-top: 5px">好医生云医疗AI好医生产品中心监控平台</div>
             </div>
 
             <div v-if="info.runningSetup" class="mt-5">
