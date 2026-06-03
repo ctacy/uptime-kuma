@@ -2,10 +2,10 @@ set -euo pipefail
 
 PROJECT_DIR="${WORKSPACE:?WORKSPACE is required}"
 IMAGE_NAME="${IMAGE_NAME:-hys-uptime-kuma:latest}"
-CONTAINER_NAME="${CONTAINER_NAME:-uptime-kuma}"
+CONTAINER_NAME="${CONTAINER_NAME:-uptime-kuma-hys}"
 DATA_DIR="${DATA_DIR:-$WORKSPACE/data}"
 BRANCH="${BRANCH:-master}"
-HOST_PORT="${HOST_PORT:-3001}"
+HOST_PORT="${HOST_PORT:-3004}"
 
 DB_HOST="${DB_HOST:?DB_HOST is required}"
 DB_PORT="${DB_PORT:-3306}"
